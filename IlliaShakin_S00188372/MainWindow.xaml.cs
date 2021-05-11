@@ -20,9 +20,35 @@ namespace IlliaShakin_S00188372
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Global List of games
+        List<Game> AllGames;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Games_Loaded(object sender, RoutedEventArgs e)
+        {
+            GameData db = new GameData();
+
+            var query = from g in db.Games
+                        select g;
+
+            AllGames = query.ToList();
+
+            lbxGames.ItemsSource = AllGames;
+
+        }
+
+        private void lbxGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Game selectedGame = lbxGames.SelectedItem as Game;
+
+            if(selectedGame != null)
+            {
+                imgGame.Source = new BitmapImage(new Uri(selectedGame.GameImage, UriKind.Relative));
+                tb
+            }
         }
     }
 }
