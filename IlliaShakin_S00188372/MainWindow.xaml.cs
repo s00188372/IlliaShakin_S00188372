@@ -15,6 +15,17 @@ using System.Windows.Shapes;
 
 namespace IlliaShakin_S00188372
 {
+
+    /*************************************************************************************************************************************************
+     
+                                                                      ILLIA SHAKIN 
+                                                                       S00188372
+                                                                  YEAR 2 SUMMER OOD EXAM  
+                                                  GITHUB :  https://github.com/s00188372/IlliaShakin_S00188372
+     
+     *************************************************************************************************************************************************/
+
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -23,12 +34,15 @@ namespace IlliaShakin_S00188372
         //Global List of games
         List<Game> AllGames;
 
+        //global access to db
         GameData db = new GameData();
         public MainWindow()
         {
             InitializeComponent();
         }
 
+
+        //events Initialized on window loaded
         private void Games_Loaded(object sender, RoutedEventArgs e)
         {
             var query = from g in db.Games
@@ -41,9 +55,10 @@ namespace IlliaShakin_S00188372
 
         }
 
+        //Populating info when game is selected
         private void lbxGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Game selectedGame = lbxGames.SelectedItem as Game;
+            Game selectedGame = lbxGames.SelectedItem as Game; // Identifying what is selected
 
             if(selectedGame != null)
             {
@@ -56,8 +71,11 @@ namespace IlliaShakin_S00188372
             }
         }
 
+
+        //Filtering with Radio Buttons
         private void rPC_Click(object sender, RoutedEventArgs e)
         {
+            //If x is selected query for it
             if(rPC.IsChecked == true)
             {
                 var query = from g in db.Games

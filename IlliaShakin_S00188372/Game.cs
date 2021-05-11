@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace IlliaShakin_S00188372
 {
+    //Class for setting up variables
     public class Game
     {
         public int ID { get; set; }
@@ -37,17 +38,22 @@ namespace IlliaShakin_S00188372
             GameImage = gameimage;
         }
 
+        //Method to Decrease Price - Nunit
+
         public void DescreasePrice(double descrease)
         {
             Price *= (decimal)(1 - descrease);
         }
 
+        //Formatting
         public override string ToString()
         {
             return Name;
         }
 
     }
+
+    //Setting up Code First DB
     public class GameData : DbContext
     {
         public GameData() : base("GameData") { }

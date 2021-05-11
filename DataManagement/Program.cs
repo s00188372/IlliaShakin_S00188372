@@ -11,9 +11,9 @@ namespace DataManagement
     {
         static void Main(string[] args)
         {
-            GameData db = new GameData();
+            GameData db = new GameData(); //Creating DB
 
-            using (db)
+            using (db) //Using Db set to populate with Game Objects
             {
                 Game g1 = new Game()
                 {
@@ -57,6 +57,7 @@ namespace DataManagement
 
                 Console.WriteLine("Creating Game Objects");
 
+                //Adding Games to DB
                 db.Games.Add(g1);
                 db.Games.Add(g2);
                 db.Games.Add(g3);
@@ -64,6 +65,7 @@ namespace DataManagement
 
                 Console.WriteLine("Adding Games to DB");
 
+                //Saving DB
                 db.SaveChanges();
 
 
