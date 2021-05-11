@@ -17,9 +17,11 @@
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <TextBlock x:Name="tblkName" Margin="0 20 0 0" HorizontalAlignment="Left" Height="20" Width="150"></TextBlock>
             <TextBlock x:Name="tblkMeta" Margin="0 20 0 0" HorizontalAlignment="Left" Height="20" Width="150"></TextBlock>
-            <TextBlock x:Name="tblkDesc" Margin="0 20 0 0" HorizontalAlignment="Left" Height="20" Width="150"></TextBlock>
+            <ScrollViewer Margin="0 20 0 0">
+                <TextBlock x:Name="tblkDesc" TextWrapping="Wrap" HorizontalAlignment="Left" Height="40" Width="350"></TextBlock>
+            </ScrollViewer>
             <TextBlock x:Name="tblkPlatform" Margin="0 20 0 0" HorizontalAlignment="Left" Height="20" Width="150"></TextBlock>
-            <TextBlock x:Name="tblkPrice" Margin="0 20 0 0" HorizontalAlignment="Left" Height="20" Width="150"></TextBlock>
+            <TextBlock x:Name="tblkPrice" Margin="0 20 0 20" HorizontalAlignment="Left" Height="20" Width="150"></TextBlock>
             <Image x:Name="imgGame" HorizontalAlignment="Left" Height="150" Width="150"></Image>
         </StackPanel>
 

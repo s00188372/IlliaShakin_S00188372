@@ -47,7 +47,11 @@ namespace IlliaShakin_S00188372
             if(selectedGame != null)
             {
                 imgGame.Source = new BitmapImage(new Uri(selectedGame.GameImage, UriKind.Relative));
-                tb
+                tblkName.Text = selectedGame.Name;
+                tblkMeta.Text = selectedGame.Metacritic.ToString();
+                tblkPlatform.Text = selectedGame.Platform;
+                tblkPrice.Text = selectedGame.Price.ToString();
+                tblkDesc.Text = selectedGame.Description;
             }
         }
     }
