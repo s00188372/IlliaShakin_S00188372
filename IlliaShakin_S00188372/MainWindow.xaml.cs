@@ -22,6 +22,8 @@ namespace IlliaShakin_S00188372
     {
         //Global List of games
         List<Game> AllGames;
+
+        GameData db = new GameData();
         public MainWindow()
         {
             InitializeComponent();
@@ -29,14 +31,13 @@ namespace IlliaShakin_S00188372
 
         private void Games_Loaded(object sender, RoutedEventArgs e)
         {
-            GameData db = new GameData();
-
             var query = from g in db.Games
                         select g;
 
             AllGames = query.ToList();
-
             lbxGames.ItemsSource = AllGames;
+
+            rAll.IsChecked = true;
 
         }
 
@@ -50,9 +51,57 @@ namespace IlliaShakin_S00188372
                 tblkName.Text = selectedGame.Name;
                 tblkMeta.Text = selectedGame.Metacritic.ToString();
                 tblkPlatform.Text = selectedGame.Platform;
-                tblkPrice.Text = selectedGame.Price.ToString();
+                tblkPrice.Text = $"{selectedGame.Price:C}";
                 tblkDesc.Text = selectedGame.Description;
             }
+        }
+
+        private void rPC_Click(object sender, RoutedEventArgs e)
+        {
+            if(rPC.IsChecked == true)
+            {
+                var query = from g in db.Games
+                            where g.Platform == "PC"
+                            select g;
+                AllGames = query.ToList();
+                lbxGames.ItemsSource = AllGames;
+            }
+            else if(rXbox.IsChecked == true)
+            {
+                var query = from g in db.Games
+                            where g.Platform == "Xbox"
+                            select g;
+                AllGames = query.ToList();
+                lbxGames.ItemsSource = AllGames;
+            }
+            else if (rSwitch.IsChecked == true)
+            {
+                var query = from g in db.Games
+                            where g.Platform == "Switch"
+                            select g;
+                AllGames = query.ToList();
+                lbxGames.ItemsSource = AllGames;
+            }
+            else if (rPS.IsChecked == true)
+            {
+                var query = from g in db.Games
+                            where g.Platform == "PS"
+                            select g;
+                AllGames = query.ToList();
+                lbxGames.ItemsSource = AllGames;
+            }
+            else if(rAll.IsChecked == true)
+            {
+                var query = from g in db.Games
+                            select g;
+
+                AllGames = query.ToList();
+                lbxGames.ItemsSource = AllGames;
+            }
+
+
+
+
         }
     }
 }
