@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace IlliaShakin_S00188372
 {
     public class Game
     {
+        public int ID { get; set; }
         public string Name { get; set; }
 
         public int Metacritic { get; set; }
@@ -40,6 +42,16 @@ namespace IlliaShakin_S00188372
             Price *= (decimal)(1 - descrease);
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
 
+    }
+    public class GameData : DbContext
+    {
+        public GameData() : base("GameData") { }
+
+        public DbSet<Game> Games { get; set; }
     }
 }

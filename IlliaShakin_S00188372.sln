@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IlliaShakin_S00188372", "Il
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{40989825-2645-46F8-8253-CD590D8E496B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagement", "DataManagement\DataManagement.csproj", "{39CAD669-1C8A-4869-9710-EAA758EB0B55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{40989825-2645-46F8-8253-CD590D8E496B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40989825-2645-46F8-8253-CD590D8E496B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40989825-2645-46F8-8253-CD590D8E496B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39CAD669-1C8A-4869-9710-EAA758EB0B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CAD669-1C8A-4869-9710-EAA758EB0B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CAD669-1C8A-4869-9710-EAA758EB0B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CAD669-1C8A-4869-9710-EAA758EB0B55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
