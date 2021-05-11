@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IlliaShakin_S00188372"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Games_Loaded">
+        Title="MainWindow" Height="450" Width="800" Loaded="Games_Loaded"
+        Background="{DynamicResource MaterialDesignLightBackground}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
     <Window.Resources>
         <DataTemplate x:Key="lbxTemplate">
             <StackPanel Orientation="Horizontal">
@@ -22,11 +24,11 @@
             <ColumnDefinition Width="50*"/>
         </Grid.ColumnDefinitions>
 
-        <RadioButton x:Name="rPC" Content="PC" HorizontalAlignment="Center" Grid.Column="0"  Margin="18,40,334,0" Width="44" Click="rPC_Click"/>
-        <RadioButton x:Name="rXbox" Content="Xbox" HorizontalAlignment="Center" Grid.Column="0"  Margin="62,40,276,0" Width="58" Click="rPC_Click"/>
-        <RadioButton x:Name="rSwitch" Content="Switch" HorizontalAlignment="Center" Grid.Column="0"  Margin="125,40,203,0" Width="68" Click="rPC_Click"/>
-        <RadioButton x:Name="rPS" Content="PS" HorizontalAlignment="Center" Grid.Column="0"  Margin="198,40,144,0" Width="54" Click="rPC_Click"/>
-        <RadioButton x:Name="rAll" Content="All" HorizontalAlignment="Center" Grid.Column="0"  Margin="240,40,102,0" Width="54" Click="rPC_Click"/>
+        <RadioButton x:Name="rPC" Content="PC" VerticalAlignment="Top" Grid.Column="0"  Margin="18,40,334,0" Width="44" Click="rPC_Click"/>
+        <RadioButton x:Name="rXbox" Content="Xbox" VerticalAlignment="Top" Grid.Column="0"  Margin="62,40,276,0" Width="58" Click="rPC_Click"/>
+        <RadioButton x:Name="rSwitch" Content="Switch" VerticalAlignment="Top" Grid.Column="0"  Margin="125,40,203,0" Width="68" Click="rPC_Click"/>
+        <RadioButton x:Name="rPS" Content="PS" VerticalAlignment="Top" Grid.Column="0"  Margin="198,40,144,0" Width="54" Click="rPC_Click"/>
+        <RadioButton x:Name="rAll" Content="All" VerticalAlignment="Top" Grid.Column="0"  Margin="240,40,102,0" Width="54" Click="rPC_Click"/>
         <ListBox x:Name="lbxGames"  Grid.Column="0" ItemTemplate="{StaticResource lbxTemplate}" HorizontalAlignment="Center" Height="300" Width="360" SelectionChanged="lbxGames_SelectionChanged"></ListBox>
 
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
